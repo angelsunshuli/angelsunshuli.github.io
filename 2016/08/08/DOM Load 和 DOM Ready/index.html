@@ -86,12 +86,25 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sally">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="由于对window.onload等语法认识不清，所以有针对性的总结了一下js和jquery关于DOM加载一些方法及其异同
+初始化加载一：jquery 和 js 初始化加载的区别一般情况一个页面响应加载的顺序是，域名解析-加载html-加载js和css-加载图片等其他信息。
+
+js     （Dom Load）:指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。js是页面全">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM Load 和 DOM Ready">
+<meta property="og:url" content="http://yoursite.com/2016/08/08/DOM Load 和 DOM Ready/index.html">
 <meta property="og:site_name" content="Sally">
+<meta property="og:description" content="由于对window.onload等语法认识不清，所以有针对性的总结了一下js和jquery关于DOM加载一些方法及其异同
+初始化加载一：jquery 和 js 初始化加载的区别一般情况一个页面响应加载的顺序是，域名解析-加载html-加载js和css-加载图片等其他信息。
+
+js     （Dom Load）:指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。js是页面全">
+<meta property="og:updated_time" content="2016-08-22T13:25:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sally">
+<meta name="twitter:title" content="DOM Load 和 DOM Ready">
+<meta name="twitter:description" content="由于对window.onload等语法认识不清，所以有针对性的总结了一下js和jquery关于DOM加载一些方法及其异同
+初始化加载一：jquery 和 js 初始化加载的区别一般情况一个页面响应加载的顺序是，域名解析-加载html-加载js和css-加载图片等其他信息。
+
+js     （Dom Load）:指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。js是页面全">
 
 
 
@@ -112,9 +125,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/08/DOM Load 和 DOM Ready/"/>
 
-  <title> Sally </title>
+  <title> DOM Load 和 DOM Ready | Sally </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -145,9 +158,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,9 +288,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -299,119 +310,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/08/22/postName/" itemprop="url">
-                  postName
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-22T21:11:25+08:00" content="2016-08-22">
-              2016-08-22
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/22/postName/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/postName/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/08/22/postName/" class="leancloud_visitors" data-flag-title="postName">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/08/DOM Load 和 DOM Ready/" itemprop="url">
-                  DOM Load 和 DOM Ready
-                </a>
+                DOM Load 和 DOM Ready
               
             
           </h1>
@@ -467,9 +366,7 @@
       
 
       
-        
-          
-            <p>由于对window.onload等语法认识不清，所以有针对性的总结了一下js和jquery关于DOM加载一些方法及其异同</p>
+        <p>由于对window.onload等语法认识不清，所以有针对性的总结了一下js和jquery关于DOM加载一些方法及其异同</p>
 <h2 id="初始化加载"><a href="#初始化加载" class="headerlink" title="初始化加载"></a>初始化加载</h2><h3 id="一：jquery-和-js-初始化加载的区别"><a href="#一：jquery-和-js-初始化加载的区别" class="headerlink" title="一：jquery 和 js 初始化加载的区别"></a>一：jquery 和 js 初始化加载的区别</h3><p>一般情况一个页面响应加载的顺序是，域名解析-加载html-加载js和css-加载图片等其他信息。</p>
 <hr>
 <h4 id="js-（Dom-Load）-指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。"><a href="#js-（Dom-Load）-指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。" class="headerlink" title="js     （Dom Load）:指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。"></a>js     （Dom Load）:指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。</h4><p>js是页面全部加载完成才执行初始化加载。js中的window.onload是等页面加载完所有的元素，包括图片等等资源要全部加载成功后才执行<br>特例</p>
@@ -484,16 +381,25 @@
 <h3 id="四、所有DOM元素加载之前执行的jQuery代码"><a href="#四、所有DOM元素加载之前执行的jQuery代码" class="headerlink" title="四、所有DOM元素加载之前执行的jQuery代码"></a>四、所有DOM元素加载之前执行的jQuery代码</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript"></span></div><div class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">            alert(<span class="string">"DOM还没加载哦!"</span>);</div><div class="line">        &#125;)(jQuery)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>IE只有在页面不是嵌入frame中的情况下才和Firefox等一样，先执行$(document).ready()的内容，再执行原来的onload方法。对于嵌入frame中的页面，也只是绑定在load事件上执行，所以自然是在原来的onload绑定的方法执行之后才轮到。而这个页面中正好在测试环境下有一个访问不到的资源，那十几秒的延迟正是它放大出的时间差。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg" alt="Sun Shuli wechat" style="width: 200px; max-width: 100%;"/>
+    <div></div>
+</div>
+
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -501,137 +407,74 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/08/08/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/08/08/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-08T09:18:21+08:00" content="2016-08-08">
-              2016-08-08
-            </time>
-          </span>
-
-          
-
-          
+              <a href="/2016/08/22/postName/" rel="prev" title="postName">
+                postName <i class="fa fa-chevron-right"></i>
+              </a>
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/08/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/08/08/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -639,6 +482,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/08/DOM Load 和 DOM Ready/"
+           data-title="DOM Load 和 DOM Ready" data-url="http://yoursite.com/2016/08/08/DOM Load 和 DOM Ready/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -658,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ocbnnfsqa.bkt.clouddn.com/mygirl.jpg"
@@ -722,6 +582,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化加载"><span class="nav-number">1.</span> <span class="nav-text">初始化加载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一：jquery-和-js-初始化加载的区别"><span class="nav-number">1.1.</span> <span class="nav-text">一：jquery 和 js 初始化加载的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#js-（Dom-Load）-指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。"><span class="nav-number">1.1.1.</span> <span class="nav-text">js     （Dom Load）:指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jquery-（Dom-Ready）-表示文档结构已经加载完成（不包含图片等非文字媒体文件）"><span class="nav-number">1.1.2.</span> <span class="nav-text">jquery   （Dom Ready）:表示文档结构已经加载完成（不包含图片等非文字媒体文件）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二：js和jquery页面初始化加载函数的方法及先后顺序"><span class="nav-number">1.2.</span> <span class="nav-text">二：js和jquery页面初始化加载函数的方法及先后顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、用-window-load-function-而不用body-onload-的几个理由"><span class="nav-number">1.3.</span> <span class="nav-text">三、用$(window).load(function(){...})而不用body.onload()的几个理由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、所有DOM元素加载之前执行的jQuery代码"><span class="nav-number">1.4.</span> <span class="nav-text">四、所有DOM元素加载之前执行的jQuery代码</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -818,6 +689,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

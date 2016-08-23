@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sally</title>
+  
+  <link href="/atom.xim" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-08-22T13:11:25.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Sun Shuli</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>postName</title>
+    <link href="http://yoursite.com/2016/08/22/postName/"/>
+    <id>http://yoursite.com/2016/08/22/postName/</id>
+    <published>2016-08-22T13:11:25.000Z</published>
+    <updated>2016-08-22T13:11:25.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DOM Load 和 DOM Ready</title>
+    <link href="http://yoursite.com/2016/08/08/DOM%20Load%20%E5%92%8C%20DOM%20Ready/"/>
+    <id>http://yoursite.com/2016/08/08/DOM Load 和 DOM Ready/</id>
+    <published>2016-08-08T01:35:40.000Z</published>
+    <updated>2016-08-22T13:25:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于对window.onload等语法认识不清，所以有针对性的总结了一下js和jquery关于DOM加载一些方法及其异同</p>
+<h2 id="初始化加载"><a href="#初始化加载" class="headerlink" title="初始化加载"></a>初始化加载</h2><h3 id="一：jquery-和-js-初始化加载的区别"><a href="#一：jquery-和-js-初始化加载的区别" class="headerlink" title="一：jquery 和 js 初始化加载的区别"></a>一：jquery 和 js 初始化加载的区别</h3><p>一般情况一个页面响应加载的顺序是，域名解析-加载html-加载js和css-加载图片等其他信息。</p>
+<hr>
+<h4 id="js-（Dom-Load）-指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。"><a href="#js-（Dom-Load）-指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。" class="headerlink" title="js     （Dom Load）:指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。"></a>js     （Dom Load）:指示页面包含图片等文件在内的所有元素（整个document文档）都加载完成。</h4><p>js是页面全部加载完成才执行初始化加载。js中的window.onload是等页面加载完所有的元素，包括图片等等资源要全部加载成功后才执行<br>特例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"imgID"</span>).onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">     <span class="comment">//do something</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h4 id="jquery-（Dom-Ready）-表示文档结构已经加载完成（不包含图片等非文字媒体文件）"><a href="#jquery-（Dom-Ready）-表示文档结构已经加载完成（不包含图片等非文字媒体文件）" class="headerlink" title="jquery   （Dom Ready）:表示文档结构已经加载完成（不包含图片等非文字媒体文件）"></a>jquery   （Dom Ready）:表示文档结构已经加载完成（不包含图片等非文字媒体文件）</h4><p>等待页面加载完数据，以及页面部分元素（不包括图片、视频）。在DOM加载完成后就可以可以对DOM进行操作。</p>
+<hr>
+<p>注意：window.onload不能同时编写多个，如果有多个window.onload方法，只会执行一个<br>$(document).ready()可以同时编写多个，并且都可以得到执行</p>
+<h3 id="二：js和jquery页面初始化加载函数的方法及先后顺序"><a href="#二：js和jquery页面初始化加载函数的方法及先后顺序" class="headerlink" title="二：js和jquery页面初始化加载函数的方法及先后顺序"></a>二：js和jquery页面初始化加载函数的方法及先后顺序</h3><p>运行下面代码。弹出A、B、C、D、E的顺序：A=B=C&gt;D=E=F。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/jquery-1.8.0.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"></div><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></div><div class="line">&#123;</div><div class="line">    alert(<span class="string">"A"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"B"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">jQuery(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;  </div><div class="line">    alert(<span class="string">"C"</span>);  </div><div class="line">&#125;);</div><div class="line"></div><div class="line">loads();</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">loads</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"D"</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"E"</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">$(<span class="built_in">window</span>).load(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   alert(<span class="string">"F"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">"loads();"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="三、用-window-load-function-而不用body-onload-的几个理由"><a href="#三、用-window-load-function-而不用body-onload-的几个理由" class="headerlink" title="三、用$(window).load(function(){...})而不用body.onload()的几个理由"></a>三、用<code>$(window).load(function(){...})</code>而不用<code>body.onload()</code>的几个理由</h3><p>1、如果我们想同时加载多个函数,我们必须这样写<br><code>&lt;body onload=&quot;fn1(),fn2()&quot;&gt;&lt;/body&gt;</code>看起来极其丑陋,如果用$(window).load()我们可以这样加载多个函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">window</span>).load(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">           alert(<span class="string">"hello,我是jQuery!"</span>);</div><div class="line"> &#125;);</div><div class="line">$(<span class="built_in">window</span>).load(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">       alert(<span class="string">"hello,我也是jQuery"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>2、用body.Onload()不能够做到js和html完全分离,这是一个很严重的问题.</p>
+<h3 id="四、所有DOM元素加载之前执行的jQuery代码"><a href="#四、所有DOM元素加载之前执行的jQuery代码" class="headerlink" title="四、所有DOM元素加载之前执行的jQuery代码"></a>四、所有DOM元素加载之前执行的jQuery代码</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript"></span></div><div class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">            alert(<span class="string">"DOM还没加载哦!"</span>);</div><div class="line">        &#125;)(jQuery)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>IE只有在页面不是嵌入frame中的情况下才和Firefox等一样，先执行$(document).ready()的内容，再执行原来的onload方法。对于嵌入frame中的页面，也只是绑定在load事件上执行，所以自然是在原来的onload绑定的方法执行之后才轮到。而这个页面中正好在测试环境下有一个访问不到的资源，那十几秒的延迟正是它放大出的时间差。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于对window.onload等语法认识不清，所以有针对性的总结了一下js和jquery关于DOM加载一些方法及其异同&lt;/p&gt;
+&lt;h2 id=&quot;初始化加载&quot;&gt;&lt;a href=&quot;#初始化加载&quot; class=&quot;headerlink&quot; title=&quot;初始化加载&quot;&gt;&lt;/a&gt;初始化
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2016/08/08/hello-world/"/>
+    <id>http://yoursite.com/2016/08/08/hello-world/</id>
+    <published>2016-08-08T01:18:21.000Z</published>
+    <updated>2016-08-08T01:18:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
